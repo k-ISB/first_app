@@ -2,6 +2,10 @@
 @import "bootstrap";
 
 /* universal */
+header{
+  height: 60px;
+}
+
 body {
   padding-top: 60px;
   width: 100%;
@@ -15,28 +19,26 @@ textarea{
   resize: vertical;
 }
 
-.fumbotron{
-    background: url(manaka.jpg);
-    background-size: cover;
-    //.jumbotron { background:url(main.jpg) center no-repeat; background-size: cover;}
-    margin: 0, auto;
+.jumbotron-fluid{
+  background-image: url("manaka.jpg");
+  background-size: cover;
 }
 
 .bg-mask {
+  width: 100%;
   height: 100%;
-  background: rgba(255,235,235,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .center{
   text-align: center;
+  h1{
+    margin-bottom: 20px;
+  }
 }
 
-.center h1{
-  margin-bottom: 20px;
-}
-
-.bg-mask p{
-    margin-bottom: 500px;
+.btn-custom-margin{
+  margin: 200px 0;
 }
 
 /* typography */
@@ -44,7 +46,39 @@ h1, h2, h3, h4, h5, h6{
   line-height: 1;
 }
 
-h1{
-  font-size: 3em;
-  letter-spacing: -2px;
+/* header */
+
+#logo{
+  float: left;
+  padding-top: 12px;
+  color: palevioletred;
+  letter-spacing: 0.3em;
+  font-size: 1.9em;
+  font-weight: bold; 
+  &:hover{
+    color: gray;
+    text-decoration: none;
+  }
 }
+
+/* footer */
+
+footer{
+  margin-top: 20px;
+  border-top: solid 1px gray;
+  padding-top: 10px;
+  color: black;
+  a{
+    color: black;
+  }
+  ul{
+    float: right;
+    list-style: none;
+    font-size: 25px;
+    li{
+      float: left;
+      padding: 0 15px;
+    }
+  }
+}
+
