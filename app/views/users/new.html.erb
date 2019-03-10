@@ -1,4 +1,34 @@
 <%= provide(:title, "Signup") %>
 
-<h1>プロフィールを設定しよう！</h1>
-<p>友達作りの入口</p>
+<h1 class="mx-auto">プロフィールを設定しよう！</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class:"form-control", placeholder:"名前" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class:"form-control", placeholder:"メールアドレス" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class:"form-control", placeholder:"パスワード" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class:"form-control", placeholder:"確認用パスワード" %>
+      </div>
+
+      <%= f.submit "登録", class:"btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+      
