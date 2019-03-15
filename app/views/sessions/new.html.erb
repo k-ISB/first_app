@@ -15,6 +15,11 @@
         <%= f.password_field :password, class:"form-control", placeholder:"パスワード"%>
       </div>
 
+      <%= f.label :remember_me, class:"checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>次回から自動的にログインする</span>
+      <% end %>
+
       <%= f.submit "ログイン", class:"btn btn-primary" %>
     <% end %>
 
