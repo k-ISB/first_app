@@ -103,3 +103,15 @@ footer{
   margin-left: 0;
 }
 
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 20;
+  li {
+    overflow: auto;
+    padding: 20px;
+    border: 1px solid gray;
+  }
+}
+

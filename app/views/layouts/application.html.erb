@@ -23,6 +23,9 @@
         <% end %>
       </div>
       <%= yield %>
+      <% if current_user %>
+        <%= current_user.name %>でログイン中...
+      <% end %>
       <%= render 'layouts/footer' %>
     </div>
   </body>
