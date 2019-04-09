@@ -1,0 +1,10 @@
+<h1>アカウント有効化メールのプレビュー (HTML)</h1>
+
+<p>こんにちわ <%= @user.name %>！</p>
+
+<p>
+ようこそ！ ここからアカウントの有効化をしよう！:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

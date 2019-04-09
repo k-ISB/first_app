@@ -1,0 +1,7 @@
+アカウント有効化メールのプレビュー (テキスト)
+
+やぁ、 <%= @user.name %>,
+
+こんにちわ！　ここからアカウントの有効化をしよう！:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
