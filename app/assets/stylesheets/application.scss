@@ -1,0 +1,116 @@
+@import "bootstrap";
+
+/* universal */
+header{
+    height: 65px;
+  }
+  
+  body {
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  section{
+    overflow: auto;
+  }
+  
+  textarea{
+    resize: vertical;
+  }
+  
+  .jumbotron-fluid{
+    background-image: url("manaka.jpg");
+    background-size: cover;
+  }
+  
+  .bg-mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 245, 245, 0.6);
+  }
+  
+  .center{
+    text-align: center;
+    h1{
+      margin-bottom: 20px;
+    }
+  }
+  
+  .btn-custom-margin{
+    margin: 200px 0;
+  }
+  
+  /* typography */
+  h1, h2, h3, h4, h5, h6{
+    line-height: 1;
+  }
+  
+  /* header */
+  
+  #logo{
+    float: left;
+    padding-top: 12px;
+    color: palevioletred;
+    letter-spacing: 0.2em;
+    font-size: 2.2em;
+    font-weight: bold; 
+    &:hover{
+      color: gray;
+      text-decoration: none;
+    }
+  }
+  
+  /* footer */
+  
+  footer{
+    margin-top: 20px;
+    border-top: solid 1px gray;
+    padding-top: 10px;
+    color: black;
+    a{
+      color: black;
+    }
+    ul{
+      float: right;
+      list-style: none;
+      font-size: 25px;
+      li{
+        float: left;
+        padding: 0 15px;
+      }
+    }
+  }
+  
+  /* form 
+  
+  .field_with_errors{
+    @extend .has-error;
+    .form_control{
+        
+    }
+  }
+  */
+  .checkbox{
+    margin-top: -5px;
+    span{
+      margin-left: 20px;
+      font-weight: normal;
+    }
+  }
+  
+  #session_remember_me{
+    margin-left: 0;
+  }
+  
+  /* users index */
+  
+  .users {
+    list-style: none;
+    margin: 20;
+    li {
+      overflow: auto;
+      padding: 20px;
+      border: 1px solid gray;
+    }
+  }
