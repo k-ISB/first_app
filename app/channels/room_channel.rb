@@ -8,8 +8,10 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    message = Message.create!(content: data['message'])
-    templete = ApplicationController.renderer.render(partial: 'messages/message', locals: {message: message})
-    ActionCable.server.broadcast 'room_channel', templete
+    @user = User.find(data["userId"])
+    @user.messages.create!(content: data['content'])
+    #Message.create!(content: data['content'], user_id: data["userId"])
+    #templete = ApplicationController.renderer.render(partial: 'messages/message', locals: {message: message})
+    ActionCable.server.broadcast 'room_channel', {userName: @user.name, content: data['content']}
   end
 end

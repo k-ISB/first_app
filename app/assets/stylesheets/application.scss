@@ -1,10 +1,7 @@
 @import "bootstrap";
 
 /* universal */
-header{
-    height: 65px;
-  }
-  
+
   body {
     padding-top: 60px;
     width: 100%;
@@ -49,8 +46,7 @@ header{
   /* header */
   
   #logo{
-    float: left;
-    padding-top: 12px;
+    margin-right: 50%;
     color: palevioletred;
     letter-spacing: 0.2em;
     font-size: 2.2em;
@@ -60,8 +56,8 @@ header{
       text-decoration: none;
     }
   }
-  
-  /* footer */
+
+ /* footer */
   
   footer{
     margin-top: 20px;

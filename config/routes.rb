@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   get    '/login',     to: 'sessions#new'
   post   '/login',     to: 'sessions#create'
   delete '/logout',    to: 'sessions#destroy'
-  get    'rooms/show', to: 'rooms#show'
+  get    '/rooms',     to: 'rooms#show'
   resources :users
   resources :account_activations, only: [:edit]
+  #resources :rooms, only: [:show]
+  
   mount ActionCable.server => '/cable'
 end

@@ -8,27 +8,25 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
     // Called when the subscription has been terminated by the server
   },
 
-  received: function(message) {
+  received: function(data) {
     const messages = document.getElementById('messages')
-    messages.innerHTML += message
+    messages.innerHTML += `<p>${data.userName}:<br>${data.content}</p>`
     // Called when there's incoming data on the websocket for this channel
   },
 
-  speak: function(content) {
-    return this.perform('speak', {message: content});
+  speak: function(userId, content) {
+    return this.perform('speak', {content: content, userId: userId});
   }
 });
 
 document.addEventListener('DOMContentLoaded', function(){
-  input = document.getElementById('chat-input')
-  button = document.getElementById('button')
+  const input = document.getElementById('chat-input')
+  const button = document.getElementById('button')
   button.addEventListener('click', function(){
-    content = input.value
-    if(content != nil){
-      App.room.speak(content)
-    }else if(content.length > 50){
-      alert("50字以内で入力して下さい")
-    }
+    const userId = $('.current_user_id').val();
+    const content = input.value
+    App.room.speak(userId, content)
     input.value = ""
+    console.log("jsは作動してる")
   })
 })

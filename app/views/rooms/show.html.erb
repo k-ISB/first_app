@@ -1,6 +1,17 @@
-<h1>Chat room</h1>
+<div class="container">
+  <h1>Chat room</h1>
+  <form>
+    <div class="form-inline">
+      <div class="form-group">
+        <input type="text" class="form-control" id="chat-input" />
+        <button id="button" class="btn btn-primary">送信</button>
+      </div>
+    </div>
+  </form>
   <div id="messages">
     <%= render @messages %>
   </div>
-  
+  <!-- ユーザーのIDを取得してroom.jsに渡す　-->
+  <input class="current_user_id" name="current_user_id" type="hidden" value="<%= current_user.id %>"></input>
+</div>
 
