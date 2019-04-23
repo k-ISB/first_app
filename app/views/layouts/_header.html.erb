@@ -2,8 +2,12 @@
   <div class="container">
     
       <%= link_to "趣味友探し", root_path, class: "navbar-brand", id: "logo"%>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav" id="navmenu">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#切り替え表示される"
+              aria-controls="切り替え表示される" aria-expanded="false" aria-label="ナビゲーション切り替え">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="切り替え表示される">
+        <ul class="navbar-nav mr-auto">
           <!--<li class="nav-item action"><%= link_to "home", root_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "help", help_path, class: "nav-link" %></li> -->
           <li class="nav-item"><%= link_to "ユーザー一覧", users_path, class: "nav-link" %></li>

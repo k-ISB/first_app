@@ -1,8 +1,10 @@
 <li>
   <%= gravatar_for user, size: 50 %>
   <%= link_to user.name, user %>
-  <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "削除", user, method: :delete,
-                                  data: { confirm: "本当に削除しますがよろしいですか" } %>
+  <% if current_user %>
+    <% if current_user.admin? && !current_user?(user) %>
+      | <%= link_to "削除", user, method: :delete,
+                                    data: { confirm: "本当に削除しますがよろしいですか" } %>
+    <% end %>
   <% end %>
 </li>
