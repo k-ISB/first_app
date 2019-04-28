@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_060207) do
+ActiveRecord::Schema.define(version: 2019_04_26_033610) do
 
   create_table "messages", force: :cascade do |t|
     t.string "content"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2019_04_16_060207) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
+    t.text "profile"
+    t.integer "gender"
   end
 
 end

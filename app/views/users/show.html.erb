@@ -1,12 +1,22 @@
 <%= provide(:title, @user.name) %>
 
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-6">
     <section class="user_info">
       <h1>
         <%= @user.name %>
         <%= gravatar_for @user %>
       </h1>
+      <p>
+        <% if @user.gender == 0 %>
+          男姓
+        <% else %>
+          女性
+        <% end %>
+      </p> 
+      <p class="pl-4">
+        <%= @user.profile %>
+      </p>
     </section>
   </aside>
 </div>

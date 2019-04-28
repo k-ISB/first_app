@@ -17,6 +17,12 @@
       </div>
 
       <div class="form-group">
+        <%= f.label :gender, '性別' %>
+        <%= f.radio_button :gender, 0, {checked: true} %> 男性
+        <%= f.radio_button :gender, 1, {} %> 女性
+      </div>
+
+      <div class="form-group">
         <%= f.label :password %>
         <%= f.password_field :password, class:"form-control", placeholder:"パスワード" %>
       </div>
@@ -24,6 +30,11 @@
       <div class="form-group">
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class:"form-control", placeholder:"確認用パスワード" %>
+      </div>
+
+    　<div class="form-group">
+        <%= f.label :profile %>
+        <%= f.text_area :profile, class:"form-control", placeholder:"プロフィール" %>
       </div>
 
       <%= f.submit "登録", class:"btn btn-primary" %>
